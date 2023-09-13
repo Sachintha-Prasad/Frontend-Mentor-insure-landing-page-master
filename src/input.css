@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-bg-overlay {
+    background: url("../images/bg-pattern-mobile-nav.svg"), hsl(270, 9%, 17%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom -10rem right;
+}
+
+.background-overlay-desktop {
+    background: url("../images/bg-pattern-intro-left-desktop.svg"),
+        url("../images/bg-pattern-intro-right-desktop.svg");
+    background-size: 12rem, 28rem;
+    background-repeat: no-repeat;
+    background-position: bottom left, top -5rem right;
+}
+
+.background-overlay-mobile {
+    background: url("../images/bg-pattern-intro-left-mobile.svg"),
+        url("../images/bg-pattern-intro-right-mobile.svg");
+    background-size: 12rem, 8rem;
+    background-repeat: no-repeat;
+    background-position: top left, top 15rem right;
+}
+
+.work-inner-container {
+    background: url("../images/bg-pattern-how-we-work-desktop.svg"),
+        hsl(256, 26%, 20%);
+    background-size: 30rem;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+footer {
+    background: url("../images/bg-pattern-footer-desktop.svg");
+    background-size: 35rem;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+@media (max-width: 640px) {
+    .work-inner-container {
+        background: url("../images/bg-pattern-how-we-work-mobile.svg"),
+            hsl(256, 26%, 20%);
+        background-size: 10rem;
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+
+    footer {
+        background: url("../images/bg-pattern-footer-mobile.svg");
+        background-size: 20rem;
+        background-repeat: no-repeat;
+        background-position: top left;
+    }
+}
+
+@layer components {
+    .btn-light {
+        @apply uppercase font-bold font-karla text-center tracking-widest text-very-light-gray px-6 py-2 border-2 border-very-light-gray hover:bg-very-light-gray hover:text-dark-violet transition-colors duration-300 lg:text-xl;
+    }
+
+    .btn-dark {
+        @apply uppercase font-bold font-karla text-center tracking-widest text-very-dark-violet px-6 py-2 border-2 border-very-dark-violet hover:bg-very-dark-violet hover:text-very-light-gray transition-colors duration-300 lg:text-xl;
+    }
+}
